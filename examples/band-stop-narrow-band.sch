@@ -1,0 +1,263 @@
+EESchema Schematic File Version 4
+LIBS:filter-examples-cache
+EELAYER 26 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 7 7
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L pspice:VSOURCE V?
+U 1 1 5B89A343
+P 1300 1850
+AR Path="/5B8944E1/5B89A343" Ref="V?"  Part="1" 
+AR Path="/5B8944F3/5B89A343" Ref="V?"  Part="1" 
+AR Path="/5B89451A/5B89A343" Ref="V?"  Part="1" 
+AR Path="/5B89452D/5B89A343" Ref="V6"  Part="1" 
+F 0 "V6" H 1528 1896 50  0000 L CNN
+F 1 "dc 0 ac 1" H 1528 1805 50  0000 L CNN
+F 2 "" H 1300 1850 50  0001 C CNN
+F 3 "" H 1300 1850 50  0001 C CNN
+	1    1300 1850
+	1    0    0    -1  
+$EndComp
+$Comp
+L pspice:INDUCTOR L?
+U 1 1 5B89A34A
+P 3500 1050
+AR Path="/5B8944E1/5B89A34A" Ref="L?"  Part="1" 
+AR Path="/5B8944F3/5B89A34A" Ref="L?"  Part="1" 
+AR Path="/5B89451A/5B89A34A" Ref="L?"  Part="1" 
+AR Path="/5B89452D/5B89A34A" Ref="L13"  Part="1" 
+F 0 "L13" H 3500 1265 50  0000 C CNN
+F 1 "145n" H 3500 1174 50  0000 C CNN
+F 2 "" H 3500 1050 50  0001 C CNN
+F 3 "" H 3500 1050 50  0001 C CNN
+	1    3500 1050
+	1    0    0    -1  
+$EndComp
+$Comp
+L pspice:R R?
+U 1 1 5B89A351
+P 1800 1500
+AR Path="/5B8944E1/5B89A351" Ref="R?"  Part="1" 
+AR Path="/5B8944F3/5B89A351" Ref="R?"  Part="1" 
+AR Path="/5B89451A/5B89A351" Ref="R?"  Part="1" 
+AR Path="/5B89452D/5B89A351" Ref="R11"  Part="1" 
+F 0 "R11" V 1595 1500 50  0000 C CNN
+F 1 "50" V 1686 1500 50  0000 C CNN
+F 2 "" H 1800 1500 50  0001 C CNN
+F 3 "" H 1800 1500 50  0001 C CNN
+	1    1800 1500
+	0    1    1    0   
+$EndComp
+$Comp
+L pspice:R R?
+U 1 1 5B89A358
+P 4900 1800
+AR Path="/5B8944E1/5B89A358" Ref="R?"  Part="1" 
+AR Path="/5B8944F3/5B89A358" Ref="R?"  Part="1" 
+AR Path="/5B89451A/5B89A358" Ref="R?"  Part="1" 
+AR Path="/5B89452D/5B89A358" Ref="R12"  Part="1" 
+F 0 "R12" H 4832 1754 50  0000 R CNN
+F 1 "50" H 4832 1845 50  0000 R CNN
+F 2 "" H 4900 1800 50  0001 C CNN
+F 3 "" H 4900 1800 50  0001 C CNN
+	1    4900 1800
+	-1   0    0    1   
+$EndComp
+$Comp
+L pspice:0 #GND?
+U 1 1 5B89A35F
+P 4900 2300
+AR Path="/5B8944E1/5B89A35F" Ref="#GND?"  Part="1" 
+AR Path="/5B8944F3/5B89A35F" Ref="#GND?"  Part="1" 
+AR Path="/5B89451A/5B89A35F" Ref="#GND?"  Part="1" 
+AR Path="/5B89452D/5B89A35F" Ref="#GND027"  Part="1" 
+F 0 "#GND027" H 4900 2200 50  0001 C CNN
+F 1 "0" H 4900 2387 50  0000 C CNN
+F 2 "" H 4900 2300 50  0001 C CNN
+F 3 "" H 4900 2300 50  0001 C CNN
+	1    4900 2300
+	1    0    0    -1  
+$EndComp
+$Comp
+L pspice:0 #GND?
+U 1 1 5B89A365
+P 1300 2300
+AR Path="/5B8944E1/5B89A365" Ref="#GND?"  Part="1" 
+AR Path="/5B8944F3/5B89A365" Ref="#GND?"  Part="1" 
+AR Path="/5B89451A/5B89A365" Ref="#GND?"  Part="1" 
+AR Path="/5B89452D/5B89A365" Ref="#GND023"  Part="1" 
+F 0 "#GND023" H 1300 2200 50  0001 C CNN
+F 1 "0" H 1300 2387 50  0000 C CNN
+F 2 "" H 1300 2300 50  0001 C CNN
+F 3 "" H 1300 2300 50  0001 C CNN
+	1    1300 2300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1300 1550 1300 1500
+Wire Wire Line
+	1300 1500 1550 1500
+Wire Wire Line
+	1300 2300 1300 2150
+Wire Wire Line
+	4900 2300 4900 2050
+Text GLabel 5100 1500 2    50   Output ~ 0
+BSN_OUT
+$Comp
+L pspice:C C?
+U 1 1 5B89A375
+P 3500 1500
+AR Path="/5B8944E1/5B89A375" Ref="C?"  Part="1" 
+AR Path="/5B8944F3/5B89A375" Ref="C?"  Part="1" 
+AR Path="/5B89451A/5B89A375" Ref="C?"  Part="1" 
+AR Path="/5B89452D/5B89A375" Ref="C17"  Part="1" 
+F 0 "C17" H 3678 1546 50  0000 L CNN
+F 1 "1.6n" H 3678 1455 50  0000 L CNN
+F 2 "" H 3500 1500 50  0001 C CNN
+F 3 "" H 3500 1500 50  0001 C CNN
+	1    3500 1500
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	4900 1500 4900 1550
+$Comp
+L pspice:INDUCTOR L?
+U 1 1 5B89A37E
+P 3950 1800
+AR Path="/5B8944E1/5B89A37E" Ref="L?"  Part="1" 
+AR Path="/5B8944F3/5B89A37E" Ref="L?"  Part="1" 
+AR Path="/5B89451A/5B89A37E" Ref="L?"  Part="1" 
+AR Path="/5B89452D/5B89A37E" Ref="L14"  Part="1" 
+F 0 "L14" H 3950 2015 50  0000 C CNN
+F 1 "8u" H 3950 1924 50  0000 C CNN
+F 2 "" H 3950 1800 50  0001 C CNN
+F 3 "" H 3950 1800 50  0001 C CNN
+	1    3950 1800
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	3750 1500 3850 1500
+Wire Wire Line
+	3950 1500 3950 1550
+Connection ~ 3950 1500
+$Comp
+L pspice:C C?
+U 1 1 5B89A388
+P 3950 2400
+AR Path="/5B8944E1/5B89A388" Ref="C?"  Part="1" 
+AR Path="/5B8944F3/5B89A388" Ref="C?"  Part="1" 
+AR Path="/5B89451A/5B89A388" Ref="C?"  Part="1" 
+AR Path="/5B89452D/5B89A388" Ref="C18"  Part="1" 
+F 0 "C18" H 4128 2446 50  0000 L CNN
+F 1 "29p" H 4128 2355 50  0000 L CNN
+F 2 "" H 3950 2400 50  0001 C CNN
+F 3 "" H 3950 2400 50  0001 C CNN
+	1    3950 2400
+	1    0    0    -1  
+$EndComp
+$Comp
+L pspice:0 #GND?
+U 1 1 5B89A38F
+P 3950 2850
+AR Path="/5B8944E1/5B89A38F" Ref="#GND?"  Part="1" 
+AR Path="/5B8944F3/5B89A38F" Ref="#GND?"  Part="1" 
+AR Path="/5B89451A/5B89A38F" Ref="#GND?"  Part="1" 
+AR Path="/5B89452D/5B89A38F" Ref="#GND026"  Part="1" 
+F 0 "#GND026" H 3950 2750 50  0001 C CNN
+F 1 "0" H 3950 2937 50  0000 C CNN
+F 2 "" H 3950 2850 50  0001 C CNN
+F 3 "" H 3950 2850 50  0001 C CNN
+	1    3950 2850
+	1    0    0    -1  
+$EndComp
+$Comp
+L pspice:INDUCTOR L?
+U 1 1 5B89A396
+P 2900 1800
+AR Path="/5B8944E1/5B89A396" Ref="L?"  Part="1" 
+AR Path="/5B8944F3/5B89A396" Ref="L?"  Part="1" 
+AR Path="/5B89451A/5B89A396" Ref="L?"  Part="1" 
+AR Path="/5B89452D/5B89A396" Ref="L12"  Part="1" 
+F 0 "L12" H 2900 2015 50  0000 C CNN
+F 1 "8u" H 2900 1924 50  0000 C CNN
+F 2 "" H 2900 1800 50  0001 C CNN
+F 3 "" H 2900 1800 50  0001 C CNN
+	1    2900 1800
+	0    1    1    0   
+$EndComp
+$Comp
+L pspice:C C?
+U 1 1 5B89A39D
+P 2900 2400
+AR Path="/5B8944E1/5B89A39D" Ref="C?"  Part="1" 
+AR Path="/5B8944F3/5B89A39D" Ref="C?"  Part="1" 
+AR Path="/5B89451A/5B89A39D" Ref="C?"  Part="1" 
+AR Path="/5B89452D/5B89A39D" Ref="C16"  Part="1" 
+F 0 "C16" H 3078 2446 50  0000 L CNN
+F 1 "29p" H 3078 2355 50  0000 L CNN
+F 2 "" H 2900 2400 50  0001 C CNN
+F 3 "" H 2900 2400 50  0001 C CNN
+	1    2900 2400
+	1    0    0    -1  
+$EndComp
+$Comp
+L pspice:0 #GND?
+U 1 1 5B89A3A4
+P 2900 2850
+AR Path="/5B8944E1/5B89A3A4" Ref="#GND?"  Part="1" 
+AR Path="/5B8944F3/5B89A3A4" Ref="#GND?"  Part="1" 
+AR Path="/5B89451A/5B89A3A4" Ref="#GND?"  Part="1" 
+AR Path="/5B89452D/5B89A3A4" Ref="#GND025"  Part="1" 
+F 0 "#GND025" H 2900 2750 50  0001 C CNN
+F 1 "0" H 2900 2937 50  0000 C CNN
+F 2 "" H 2900 2850 50  0001 C CNN
+F 3 "" H 2900 2850 50  0001 C CNN
+	1    2900 2850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3950 1500 4900 1500
+Wire Wire Line
+	3750 1050 3850 1050
+Wire Wire Line
+	3850 1050 3850 1500
+Wire Wire Line
+	3850 1500 3950 1500
+Connection ~ 3850 1500
+Wire Wire Line
+	3250 1050 3150 1050
+Wire Wire Line
+	3150 1050 3150 1500
+Wire Wire Line
+	3150 1500 3250 1500
+Connection ~ 3150 1500
+Wire Wire Line
+	2900 1500 2900 1550
+Wire Wire Line
+	2900 1500 3150 1500
+Connection ~ 2900 1500
+Wire Wire Line
+	2900 2050 2900 2150
+Wire Wire Line
+	2900 2650 2900 2850
+Wire Wire Line
+	3950 2850 3950 2650
+Wire Wire Line
+	3950 2150 3950 2050
+Wire Wire Line
+	2050 1500 2900 1500
+Wire Wire Line
+	4900 1500 5100 1500
+Connection ~ 4900 1500
+$EndSCHEMATC

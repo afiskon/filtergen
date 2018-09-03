@@ -1,0 +1,131 @@
+EESchema Schematic File Version 4
+LIBS:filter-examples-cache
+EELAYER 26 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 3 7
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L pspice:VSOURCE V2
+U 1 1 5B894D34
+P 1300 1500
+F 0 "V2" H 1528 1546 50  0000 L CNN
+F 1 "dc 0 ac 1" H 1528 1455 50  0000 L CNN
+F 2 "" H 1300 1500 50  0001 C CNN
+F 3 "" H 1300 1500 50  0001 C CNN
+	1    1300 1500
+	1    0    0    -1  
+$EndComp
+$Comp
+L pspice:C C3
+U 1 1 5B894D3B
+P 2350 1150
+F 0 "C3" H 2528 1196 50  0000 L CNN
+F 1 "290p" H 2528 1105 50  0000 L CNN
+F 2 "" H 2350 1150 50  0001 C CNN
+F 3 "" H 2350 1150 50  0001 C CNN
+	1    2350 1150
+	0    -1   -1   0   
+$EndComp
+$Comp
+L pspice:INDUCTOR L2
+U 1 1 5B894D42
+P 2750 1450
+F 0 "L2" H 2750 1665 50  0000 C CNN
+F 1 "726nH" H 2750 1574 50  0000 C CNN
+F 2 "" H 2750 1450 50  0001 C CNN
+F 3 "" H 2750 1450 50  0001 C CNN
+	1    2750 1450
+	0    1    1    0   
+$EndComp
+$Comp
+L pspice:R R4
+U 1 1 5B894D57
+P 3150 1450
+F 0 "R4" H 3082 1404 50  0000 R CNN
+F 1 "50" H 3082 1495 50  0000 R CNN
+F 2 "" H 3150 1450 50  0001 C CNN
+F 3 "" H 3150 1450 50  0001 C CNN
+	1    3150 1450
+	-1   0    0    1   
+$EndComp
+$Comp
+L pspice:0 #GND07
+U 1 1 5B894D5E
+P 3150 1950
+F 0 "#GND07" H 3150 1850 50  0001 C CNN
+F 1 "0" H 3150 2037 50  0000 C CNN
+F 2 "" H 3150 1950 50  0001 C CNN
+F 3 "" H 3150 1950 50  0001 C CNN
+	1    3150 1950
+	1    0    0    -1  
+$EndComp
+$Comp
+L pspice:0 #GND05
+U 1 1 5B894D64
+P 1300 1950
+F 0 "#GND05" H 1300 1850 50  0001 C CNN
+F 1 "0" H 1300 2037 50  0000 C CNN
+F 2 "" H 1300 1950 50  0001 C CNN
+F 3 "" H 1300 1950 50  0001 C CNN
+	1    1300 1950
+	1    0    0    -1  
+$EndComp
+$Comp
+L pspice:0 #GND06
+U 1 1 5B894D6A
+P 2750 1950
+F 0 "#GND06" H 2750 1850 50  0001 C CNN
+F 1 "0" H 2750 2037 50  0000 C CNN
+F 2 "" H 2750 1950 50  0001 C CNN
+F 3 "" H 2750 1950 50  0001 C CNN
+	1    2750 1950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1300 1200 1300 1150
+Wire Wire Line
+	1300 1950 1300 1800
+Wire Wire Line
+	2750 1700 2750 1950
+Wire Wire Line
+	3150 1950 3150 1700
+Wire Wire Line
+	2750 1200 2750 1150
+Text GLabel 3300 1150 2    50   Output ~ 0
+HP_OUT
+Wire Wire Line
+	3150 1150 3150 1200
+Wire Wire Line
+	2100 1150 1900 1150
+$Comp
+L pspice:R R3
+U 1 1 5B894D50
+P 1650 1150
+F 0 "R3" V 1445 1150 50  0000 C CNN
+F 1 "50" V 1536 1150 50  0000 C CNN
+F 2 "" H 1650 1150 50  0001 C CNN
+F 3 "" H 1650 1150 50  0001 C CNN
+	1    1650 1150
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	3150 1150 3300 1150
+Wire Wire Line
+	2600 1150 2750 1150
+Wire Wire Line
+	3150 1150 2750 1150
+Connection ~ 3150 1150
+Connection ~ 2750 1150
+Wire Wire Line
+	1300 1150 1400 1150
+$EndSCHEMATC
