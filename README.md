@@ -49,3 +49,30 @@ C1 = 3.18 nF, in parallel with 72.34 nH
 C3 = 3.18 nF, in parallel with 72.34 nH
 L2 = 15.92 uH, in series with 14.47 pF
 ```
+
+Also includes **coil calculator**:
+
+```
+usage: coilcalc.py [-h] [-i INDUCTANCE] [-c CARCASS_DIAMETER] [-d1 DIAMETER1]
+                   [-d2 DIAMETER2] [-t TURNS] [-l LENGTH] [-r]
+
+Calculate number of turns and winding length for a given coil inductance, or
+do a reverse calculation
+
+optional arguments:
+  -h, --help            show this help message and exit
+  -i INDUCTANCE, --inductance INDUCTANCE
+                        Target inductance in uH (default: 0)
+  -c CARCASS_DIAMETER, --carcass-diameter CARCASS_DIAMETER
+                        Carcass diameter in mm (default: 0)
+  -d1 DIAMETER1, --diameter1 DIAMETER1
+                        Wire diameter without insulation in mm (default: 0)
+  -d2 DIAMETER2, --diameter2 DIAMETER2
+                        Wire diameter with insulation in mm (default: 0)
+  -t TURNS, --turns TURNS
+                        Number of turns (only for --reverse) (default: 0)
+  -l LENGTH, --length LENGTH
+                        Winding length in mm (only for --reverse) (default: 0)
+  -r, --reverse         Reverse calculation: calculate inductance of a given
+                        coil. Requires -c, -t, -l. (default: False)
+```
