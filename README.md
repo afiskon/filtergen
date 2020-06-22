@@ -6,5 +6,6 @@ This repository contains the following scripts:
 * xtalgen.py - xtal eqivalent circuit generator / calculator
 * diplexer.py - diplexer generator
 * coilcalc.py - coil calculator
+* swr2loss.py - SWR to power loss calculator
 
 See `--help` for more details.

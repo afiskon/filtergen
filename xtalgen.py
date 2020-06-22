@@ -4,13 +4,15 @@ import sys
 from math import pi, sqrt
 
 if len(sys.argv) < 2:
-    print("Usage: " + sys.argv[0] + " frequency[hz]")
+    print("Usage: " + sys.argv[0] + " frequency[hz] [Q=7000]")
     sys.exit(1)
 
-Q = 7000 # no less than 5000
 Cp = 4/1000/1000/1000/1000 # max - 10 pF
 Cs = Cp/100 # Cs >> Cp
 freq = int(sys.argv[1])
+Q = 7000 # no less than 5000
+if len(sys.argv) >= 3:
+    Q = int(sys.argv[2])
 
 # series resonant frequency
 # Fs = 1/(2*pi*sqrt(Ls*Cs))
