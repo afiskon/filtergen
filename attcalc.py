@@ -4,7 +4,7 @@ import argparse
 from math import pow, log10
 
 parser = argparse.ArgumentParser(
-    description='Atteenuator calculator'
+    description='Attenuator calculator'
     )
 parser.add_argument(
     '-i', '--impedance', type=float, default = 50, metavar='IMP',
