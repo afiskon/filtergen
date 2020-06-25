@@ -1,4 +1,4 @@
-# Filter Generators
+# Miscellaneous radio calculators
 
 This repository contains the following scripts:
 
@@ -6,6 +6,7 @@ This repository contains the following scripts:
 * xtalgen.py - xtal eqivalent circuit generator / calculator
 * diplexer.py - diplexer generator
 * coilcalc.py - coil calculator
+* attcalc.py - attenuator calculator
 * swr2loss.py - SWR to power loss calculator
 
 See `--help` for more details.
