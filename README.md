@@ -9,6 +9,7 @@ This repository contains the following scripts:
 * coilcalc.py - coil calculator
 * attcalc.py - attenuator calculator
 * hybrid-coupler.py - 90° hybrid coupler calculator
+* phase-shifter.py - phase shifting LC-networks generator
 * swr2loss.py - SWR to power loss calculator
 
 See `--help` for more details.
