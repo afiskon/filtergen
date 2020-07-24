@@ -248,7 +248,7 @@ def calc_band_stop_filter(freq1, freq2, number_of_poles, stop_band_scale_factor 
     if freq2 <= freq1:
         raise ValueError("freq2 (%d) supposed to be larger than freq1 (%d)" % (freq2, freq1))
 
-    if False: # freq2/freq1 > 1.5: # such filters will not work, checked with SPICE simulation
+    # if freq2/freq1 >= 1.5: # such filters don't work well unless designed manyally in LTspice
         HighPass = calc_high_pass_filter(freq2, number_of_poles, Rl)
         LowPass = calc_low_pass_filter(freq1, number_of_poles, Rl)
         return Filter(filter_type = FilterType.BAND_STOP, filter_subtype = FilterSubtype.WIDE_BAND, data = [LowPass, HighPass])
