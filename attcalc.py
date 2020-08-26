@@ -20,9 +20,22 @@ std_values = [
 	2_200_000,2_400_000,2_700_000,3_000_000,3_300_000,5_100_000,
 ]
 
+
 def closest(val):
-	diffs = [ (x, abs(x-val)) for x in std_values ]
-	sorted_vals = sorted([ (x, abs(x-val)) for x in std_values ], key = lambda a: a[1])
+	diffs = [ (str(x)+" Ohm", abs(x-val)) for x in std_values ]
+	sorted_vals = sorted(diffs, key = lambda a: a[1])
+	return sorted_vals[0][0]
+
+parallel_values = [ 
+	("{}||{}={:.2f} Ohm".format(r1, r2, p), p) 
+		for r1 in std_values
+		for r2 in std_values
+		for p in [ r1*r2/(r1+r2) ]
+]
+
+def closest_parallel(val):
+	diffs = [ (desc, abs(p-val)) for (desc, p) in parallel_values ]
+	sorted_vals = sorted(diffs, key = lambda a: a[1])
 	return sorted_vals[0][0]
 
 parser = argparse.ArgumentParser(
@@ -53,8 +66,8 @@ PI-network:             T-network:
 
 """)
 
-print("R1 = R2 = {:.2f} Ohm, closest: {} Ohm".format(R1, closest(R1)))
-print("R3 = {:.2f} Ohm, closest: {} Ohm".format(R3, closest(R3)))
+print("R1 = R2 = {:.2f} Ohm, closest: {} & {}".format(R1, closest(R1), closest_parallel(R1)))
+print("R3 = {:.2f} Ohm, closest: {} & {}".format(R3, closest(R3), closest_parallel(R3)))
 print(" ")
-print("R4 = R5 = {:.2f} Ohm, closest: {} Ohm".format(R4, closest(R4)))
-print("R6 = {:.2f} Ohm, closest: {} Ohm".format(R6, closest(R6)))
+print("R4 = R5 = {:.2f} Ohm, closest: {} & {}".format(R4, closest(R4), closest_parallel(R4)))
+print("R6 = {:.2f} Ohm, closest: {} & {}".format(R6, closest(R6), closest_parallel(R6)))
