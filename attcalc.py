@@ -44,11 +44,14 @@ parser = argparse.ArgumentParser(
     description='Attenuator calculator'
     )
 parser.add_argument(
-    '-i', '--impedance', type=float, default = 50, metavar='IMP',
-    help='Impedance (default 50 Ohm)')
+    '-i', '--impedance', type=float, default = 50, metavar='I',
+    help='impedance (default 50 Ohm)')
 parser.add_argument(
-    '-a', '--attenuation', type=float, required=True, metavar='ATT',
-    help='Target attenuation in dB')
+    '-p', '--parallel', action="store_true",
+    help='suggest closest resistor values connected in parallel')
+parser.add_argument(
+    '-a', '--att', type=float, required=True, metavar='A',
+    help='target attenuation in dB')
 args = parser.parse_args()
 
 Z0 = args.impedance
@@ -68,14 +71,15 @@ PI-network:             T-network:
 
 """)
 
-#print("R1 = R2 = {:.2f} Ohm, closest: {} & {}".format(R1, closest(R1), closest_parallel(R1)))
-#print("R3 = {:.2f} Ohm, closest: {} & {}".format(R3, closest(R3), closest_parallel(R3)))
-#print(" ")
-#print("R4 = R5 = {:.2f} Ohm, closest: {} & {}".format(R4, closest(R4), closest_parallel(R4)))
-#print("R6 = {:.2f} Ohm, closest: {} & {}".format(R6, closest(R6), closest_parallel(R6)))
-
-print("R1 = R2 = {:.2f} Ohm, closest: {}".format(R1, closest(R1)))
-print("R3 = {:.2f} Ohm, closest: {}".format(R3, closest(R3)))
-print(" ")
-print("R4 = R5 = {:.2f} Ohm, closest: {}".format(R4, closest(R4)))
-print("R6 = {:.2f} Ohm, closest: {}".format(R6, closest(R6)))
+if args.parallel:
+    print("R1 = R2 = {:.2f} Ohm, closest: {} & {}".format(R1, closest(R1), closest_parallel(R1)))
+    print("R3 = {:.2f} Ohm, closest: {} & {}".format(R3, closest(R3), closest_parallel(R3)))
+    print(" ")
+    print("R4 = R5 = {:.2f} Ohm, closest: {} & {}".format(R4, closest(R4), closest_parallel(R4)))
+    print("R6 = {:.2f} Ohm, closest: {} & {}".format(R6, closest(R6), closest_parallel(R6)))
+else:
+    print("R1 = R2 = {:.2f} Ohm, closest: {}".format(R1, closest(R1)))
+    print("R3 = {:.2f} Ohm, closest: {}".format(R3, closest(R3)))
+    print(" ")
+    print("R4 = R5 = {:.2f} Ohm, closest: {}".format(R4, closest(R4)))
+    print("R6 = {:.2f} Ohm, closest: {}".format(R6, closest(R6)))
