@@ -55,7 +55,7 @@ parser.add_argument(
 args = parser.parse_args()
 
 Z0 = args.impedance
-N = pow(10, args.attenuation/20)
+N = pow(10, args.att/20)
 R1 = R2 = Z0*(N+1)/(N-1)
 R3 = Z0*(pow(N,2)-1)/(2*N)
 R4 = R5 = Z0*(N-1)/(N+1)
