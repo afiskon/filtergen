@@ -225,7 +225,7 @@ def calc_band_pass_filter(freq1, freq2, number_of_poles, pass_band_scale_factor 
     if freq2 <= freq1:
         raise ValueError("freq2 (%d) supposed to be larger than freq1 (%d)" % (freq2, freq1))
 
-    # wideband case: at least two octaves difference (4x in frequency)
+    # wideband case: at least two octaves difference (4x in frequency) for bandpass
     if freq2/freq1 > 4:
         HighPass = calc_high_pass_filter(freq1, number_of_poles, Rl)
         LowPass = calc_low_pass_filter(freq2, number_of_poles, Rl)
@@ -249,8 +249,8 @@ def calc_band_stop_filter(freq1, freq2, number_of_poles, stop_band_scale_factor 
     if freq2 <= freq1:
         raise ValueError("freq2 (%d) supposed to be larger than freq1 (%d)" % (freq2, freq1))
 
-    # wideband case: at least two octaves difference (4x in frequency)
-    if freq2/freq1 >= 4: 
+    # wideband case: at least one octave difference (2x in frequency) for bandstop
+    if freq2/freq1 >= 2:
         HighPass = calc_high_pass_filter(freq2, number_of_poles, Rl)
         LowPass = calc_low_pass_filter(freq1, number_of_poles, Rl)
         return Filter(filter_type = FilterType.BAND_STOP, filter_subtype = FilterSubtype.WIDE_BAND, data = [LowPass, HighPass])
